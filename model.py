@@ -1,5 +1,5 @@
 from datetime import datetime
-from decimal import *
+from decimal import Decimal
 from typing import NamedTuple, Optional, List
 
 Price = Decimal

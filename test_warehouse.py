@@ -1,7 +1,7 @@
 import unittest
 from decimal import Decimal
 
-from model import Product, CustomerID, DispatchPlan, Balance, ReportEntry
+from model import Product, CustomerID, ReportEntry
 from warehouse import Warehouse
 
 

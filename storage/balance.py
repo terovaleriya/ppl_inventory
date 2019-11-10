@@ -3,7 +3,7 @@ import sqlite3
 from datetime import datetime
 from decimal import Decimal
 from sqlite3 import Connection
-from typing import List, Optional, Any
+from typing import List, Optional
 
 from model import Balance, Receive, DocumentID, Amount, SKU, ReportEntry
 from storage.testing import BaseTableTest

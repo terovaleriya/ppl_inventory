@@ -49,7 +49,6 @@ def main():
 @main.command("list-products", help='Вывести список всех товаров')
 def list_products():
     products = warehouse.list_products()
-    from tabulate import tabulate
     print(tabulate(products, numalign="right", headers=["Артикул", "Наименованиее", "Ед. измерения"], tablefmt="psql"))
 
 
@@ -72,7 +71,7 @@ def delete_customers(id: CustomerID):
 
 
 @main.command("receive", help='Ввести поступление товара')
-@click.option('--sku', prompt='Артикул', help='Артикул товара', callback=validate_sku)
+@click.option('--sku', prompt='Ар`тикул', help='Артикул товара', callback=validate_sku)
 @click.option('--price', prompt='Цена', help='Цена товара', callback=validate_price)
 @click.option('--amount', type=click.IntRange(1), prompt='Количеество', help='Количество товара')
 def receive(sku: str, price: Decimal, amount: int):
